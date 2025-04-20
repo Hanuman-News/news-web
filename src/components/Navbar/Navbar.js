@@ -124,7 +124,7 @@ export default function Navbar({
 
         {/* Logo */}
         <div className="text-2xl font-bold text-center text-blue-600 dark:text-white">
-          NewsPortal
+          Hanuman News
         </div>
 
         {/* Login Button */}
@@ -179,7 +179,7 @@ export default function Navbar({
         isAddNewsOpen={isAddNewsOpen}
         setIsAddNewsOpen={setIsAddNewsOpen}
         handleAddNewsSubmit={handleAddNewsSubmit}
-        onSuccess={() => setRefreshTrigger(prev => prev + 1)}
+        onSuccess={() => setRefreshTrigger((prev) => prev + 1)}
       />
     </div>
   );
