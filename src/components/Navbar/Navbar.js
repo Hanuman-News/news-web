@@ -44,14 +44,6 @@ export default function Navbar({
     }
   };
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
-  //   const storedUser = localStorage.getItem("user");
-  //   if (token && storedUser) {
-  //     setUser(JSON.parse(storedUser));
-  //   }
-  // }, []);
-
   const handleLogout = async () => {
     try {
       const token = localStorage.getItem("token");

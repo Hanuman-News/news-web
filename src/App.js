@@ -35,6 +35,7 @@ function App() {
                 user={user}
                 setUser={setUser}
                 setSearchQuery={setSearchQuery}
+                setRefreshTrigger={setRefreshTrigger}
               />
 
               <NewsFeed

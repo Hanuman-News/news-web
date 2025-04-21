@@ -55,7 +55,9 @@ const AddNewsModal = ({
       setAuthorName("");
       setNewsType("sport");
       setIsAddNewsOpen(false);
-      if (onSuccess) onSuccess();
+      if (typeof onSuccess === 'function') {
+        onSuccess();
+      }
     } finally {
       setIsSubmitting(false);
     }
