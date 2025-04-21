@@ -51,6 +51,7 @@ const AddNewsModal = ({
       // Reset form after submission
       setTitle("");
       setImagePath(null);
+      setImagePreview(null);
       setArticle("");
       setAuthorName("");
       setNewsType("sport");
