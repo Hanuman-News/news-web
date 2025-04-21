@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import api from "../../utils/axios";
 import AuthModal from "./components/AuthModal/AuthModal";
 import AddNewsModal from "./components/AddNewsModal/AddNewsModal";
@@ -44,13 +44,13 @@ export default function Navbar({
     }
   };
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    const storedUser = localStorage.getItem("user");
-    if (token && storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, []);
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token");
+  //   const storedUser = localStorage.getItem("user");
+  //   if (token && storedUser) {
+  //     setUser(JSON.parse(storedUser));
+  //   }
+  // }, []);
 
   const handleLogout = async () => {
     try {
@@ -65,6 +65,7 @@ export default function Navbar({
         }
       );
       localStorage.removeItem("token");
+      localStorage.removeItem("user");
       setUser(null);
     } catch (error) {
       console.error("Logout failed:", error);
