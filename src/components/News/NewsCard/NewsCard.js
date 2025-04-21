@@ -25,6 +25,7 @@ export default function NewsCard({ item, user }) {
         },
       });
       navigate("/", { replace: true });
+      window.location.reload();
     } catch (error) {
       console.error("Failed to delete news:", error);
       alert("Failed to delete news.");
