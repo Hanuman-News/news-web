@@ -40,7 +40,11 @@ export default function NewsCard({ item, user }) {
       <div onClick={handleCardClick} className="cursor-pointer">
         {item.image_path && (
           <img
-            src={`http://127.0.0.1:8000/storage/${item.image_path}`}
+            src={
+              process.env.REACT_APP_API_URL
+                ? `${process.env.REACT_APP_API_URL.replace("/api", "")}/storage/${item.image_path}`
+                : `http://127.0.0.1:8000/storage/${item.image_path}`
+            }
             alt={item.title}
             className={`w-full object-cover rounded h-48 mb-4`}
           />
