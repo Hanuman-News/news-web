@@ -66,8 +66,8 @@ const NewsDetails = ({ user }) => {
         <img
           src={
             process.env.REACT_APP_API_URL
-              ? `${process.env.REACT_APP_API_URL.replace("/api", "")}/storage/${item.image_path}`
-              : `http://127.0.0.1:8000/storage/${item.image_path}`
+              ? `${process.env.REACT_APP_API_URL.replace("/api", "")}/storage/${newsItem.image_path}`
+              : `http://127.0.0.1:8000/storage/${newsItem.image_path}`
           }
           alt={newsItem.title}
           className="w-full h-auto max-h-96 object-cover rounded-lg mb-6"
