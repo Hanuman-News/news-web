@@ -65,8 +65,8 @@ const NewsDetails = ({ user }) => {
       {newsItem.image_path && (
         <img
           src={
-            process.env.REACT_APP_API_URL
-              ? `${process.env.REACT_APP_API_URL.replace("/api", "")}/storage/${newsItem.image_path}`
+            window.location.hostname.includes("mornsophawit")
+              ? `https://api-news.mornsophawit.site/storage/${newsItem.image_path}`
               : `http://127.0.0.1:8000/storage/${newsItem.image_path}`
           }
           alt={newsItem.title}

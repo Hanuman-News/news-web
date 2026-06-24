@@ -41,8 +41,8 @@ export default function NewsCard({ item, user }) {
         {item.image_path && (
           <img
             src={
-              process.env.REACT_APP_API_URL
-                ? `${process.env.REACT_APP_API_URL.replace("/api", "")}/storage/${item.image_path}`
+              window.location.hostname.includes("mornsophawit")
+                ? `https://api-news.mornsophawit.site/storage/${item.image_path}`
                 : `http://127.0.0.1:8000/storage/${item.image_path}`
             }
             alt={item.title}
